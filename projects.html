@@ -1,112 +1,171 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projects — Anushka Patil</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects — Anushka Patil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a href="index.html" class="wordmark"
+          >Anushka Patil<small>Backend Developer</small></a
+        >
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </header>
 
-<header class="site-header">
-  <div class="wrap">
-    <a href="index.html" class="wordmark">Anushka Patil<small>Backend Developer</small></a>
-    <button class="nav-toggle" aria-label="Toggle navigation"><span></span></button>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="projects.html" class="active">Projects</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </div>
-</header>
+    <main>
+      <section class="block reveal" style="padding-top: 72px">
+        <div class="wrap">
+          <span class="eyebrow">Projects</span>
+          <h2>Things I've built</h2>
+          <p class="intro">
+            Two full builds — one a deployed full-stack platform, the other an
+            applied machine-learning system.
+          </p>
 
-<main>
-  <section class="block reveal" style="padding-top:72px;">
-    <div class="wrap">
-      <span class="eyebrow">Projects</span>
-      <h2>Things I've built</h2>
-      <p class="intro">Three projects from coursework and self-study, spanning desktop, web and data-structure–driven applications.</p>
+          <div class="project-grid">
+            <div class="project-card">
+              <span class="project-num">01 — FULL-STACK · DEPLOYED</span>
+              <h3>CoFound</h3>
+              <p>
+                A role-based job matching platform connecting companies with
+                student job-seekers.
+              </p>
+              <ul
+                style="
+                  color: var(--ink-soft);
+                  font-size: 14.5px;
+                  padding-left: 18px;
+                  margin-bottom: 18px;
+                "
+              >
+                <li style="margin-bottom: 8px">
+                  Built a full-stack recruiting platform with Spring Boot,
+                  Spring Security (JWT) and React, supporting role-based access
+                  control (companies vs. students) across the API and UI layers.
+                </li>
+                <li style="margin-bottom: 8px">
+                  Designed a normalized relational schema with many-to-many
+                  skill tagging and a status-driven application workflow
+                  (Applied → Shortlisted → Hired/Rejected).
+                </li>
+                <li>
+                  Deployed the backend (Dockerized) and frontend independently,
+                  with environment-based configuration for local vs. production.
+                </li>
+              </ul>
+              <div class="project-stack">
+                <span class="chip">Java</span>
+                <span class="chip">Spring Boot</span>
+                <span class="chip">Spring Security</span>
+                <span class="chip">React</span>
+                <span class="chip">MySQL</span>
+                <span class="chip">Docker</span>
+              </div>
+              <a
+                class="btn btn-primary"
+                href="https://github.com/anushkaptl07"
+                target="_blank"
+                rel="noopener"
+                >View on GitHub ↗</a
+              >
+            </div>
 
-      <div class="project-grid">
-        <div class="project-card">
-          <span class="project-num">01 — DESKTOP APPLICATION</span>
-          <h3>Bank Management System</h3>
-          <p>A Java Swing–based desktop application to manage core banking operations — account creation, deposits, withdrawals and balance inquiry — with JDBC connectivity to MySQL for secure data storage and full CRUD operations.</p>
-          <div class="project-stack">
-            <span class="chip">Java</span>
-            <span class="chip">JDBC</span>
-            <span class="chip">MySQL</span>
-            <span class="chip">Swing</span>
+            <div class="project-card">
+              <span class="project-num">02 — MACHINE LEARNING</span>
+              <h3>UPI Shield</h3>
+              <p>
+                An end-to-end UPI fraud detection system with real-time risk
+                assessment.
+              </p>
+              <ul
+                style="
+                  color: var(--ink-soft);
+                  font-size: 14.5px;
+                  padding-left: 18px;
+                  margin-bottom: 18px;
+                "
+              >
+                <li style="margin-bottom: 8px">
+                  Built and evaluated an XGBoost fraud classification model with
+                  leakage auditing, feature ablation and threshold tuning —
+                  achieving 99.05% accuracy, 95.27% fraud recall and a 97.19%
+                  F1-score.
+                </li>
+                <li style="margin-bottom: 8px">
+                  Removed deterministic/leaky behavioral features to build a
+                  more realistic model, validated through robustness testing and
+                  feature-importance analysis (99.84% ROC-AUC).
+                </li>
+                <li>
+                  Built a FastAPI prediction service returning fraud
+                  probability, risk level and transaction decision
+                  (Approve/Block/Investigate), connected to a responsive
+                  HTML/CSS/JS dashboard.
+                </li>
+              </ul>
+              <div class="project-stack">
+                <span class="chip">Python</span>
+                <span class="chip">XGBoost</span>
+                <span class="chip">FastAPI</span>
+                <span class="chip">HTML/CSS/JS</span>
+              </div>
+              <a
+                class="btn btn-primary"
+                href="https://github.com/anushkaptl07"
+                target="_blank"
+                rel="noopener"
+                >View on GitHub ↗</a
+              >
+            </div>
           </div>
-          <a class="btn btn-primary" href="https://github.com/anushkaptl07" target="_blank" rel="noopener">View on GitHub ↗</a>
+
+          <div class="build-note">
+            NOTE — CoFound's backend and frontend are deployed independently but
+            not yet on a public URL. Swap in live demo links and individual repo
+            links here once you have them.
+          </div>
         </div>
+      </section>
+    </main>
 
-        <div class="project-card">
-          <span class="project-num">02 — WEB APPLICATION</span>
-          <h3>Oasis — Old Age Home Management System</h3>
-          <p>A web-based system to manage residents, staff, medical records, donations, inventory and expenses in an old age home. Implements role-based login for managers, staff, residents and guardians, with dynamic modules and backup tables for data integrity.</p>
-          <div class="project-stack">
-            <span class="chip">JDBC</span>
-            <span class="chip">MySQL</span>
-            <span class="chip">HTML</span>
-            <span class="chip">CSS</span>
-          </div>
-          <a class="btn btn-primary" href="https://github.com/anushkaptl07" target="_blank" rel="noopener">View on GitHub ↗</a>
-        </div>
-
-        <div class="project-card">
-          <span class="project-num">03 — DATA STRUCTURES</span>
-          <h3>Music Playlist Simulator</h3>
-          <p>A music playlist simulator built on circular linked lists, letting users add, remove and navigate between songs dynamically — with next, previous and looping traversal, and handling for empty lists and edge-case input.</p>
-          <div class="project-stack">
-            <span class="chip">Java</span>
-            <span class="chip">Linked Lists</span>
-          </div>
-          <a class="btn btn-primary" href="https://github.com/anushkaptl07" target="_blank" rel="noopener">View on GitHub ↗</a>
+    <footer class="site-footer">
+      <div class="wrap">
+        <span>© 2026 Anushka Patil · Pune, Maharashtra</span>
+        <div class="footer-links">
+          <a
+            href="https://github.com/anushkaptl07"
+            target="_blank"
+            rel="noopener"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/anushka-patil-237528301"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+          <a href="mailto:anushkapatil1910@gmail.com">Email</a>
         </div>
       </div>
+    </footer>
 
-      <div class="build-note">
-        NOTE — these builds run locally / haven't been deployed yet. Each card links to my GitHub profile for now; swap in the individual repo links here once you have them.
-      </div>
-    </div>
-  </section>
-
-  <section class="block reveal">
-    <div class="wrap">
-      <span class="eyebrow">At Pincodedweb</span>
-      <h2>Internship work</h2>
-      <p class="intro">Two client projects in progress as a Backend Developer Intern, built across this stack.</p>
-      <div class="internship-card" style="grid-template-columns:1fr;">
-        <div class="internship-body">
-          <p style="color:var(--ink-soft); margin-top:0;">Placeholder — add specifics for each project here (name, what it does, your role) once you're able to share them publicly.</p>
-          <div class="stack-row">
-            <span class="stack-chip">Node.js</span>
-            <span class="stack-chip">TypeScript</span>
-            <span class="stack-chip">SQL</span>
-            <span class="stack-chip">React</span>
-            <span class="stack-chip">Flutter</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="wrap">
-    <span>© 2026 Anushka Patil · Pune, Maharashtra</span>
-    <div class="footer-links">
-      <a href="https://github.com/anushkaptl07" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com/in/anushka-patil-237528301" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="mailto:anushkapatil1910@gmail.com">Email</a>
-    </div>
-  </div>
-</footer>
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
